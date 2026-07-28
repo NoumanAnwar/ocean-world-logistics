@@ -13,7 +13,7 @@ const FooterSections = () => {
             className='mb-4 h-20 md:h-28 w-auto' 
           />
           <p className='text-sm text-white/90'>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Import & Export Customs Clearance Specialists
           </p>
           <div className='flex items-center gap-3 mt-4'>
             {/* Instagram */}
