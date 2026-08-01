@@ -37,20 +37,23 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="px-4 md:px-16 lg:px-24 xl:px-32 w-full bg-white">
+    <section
+  className="px-4 md:px-16 lg:px-24 xl:px-32 w-full bg-white"
+  aria-label="Contact Ocean World Logistics"
+>
       {/* Section Label */}
       <p className="text-center font-medium text-blue-600 px-6 py-2 rounded-full bg-blue-100 border border-blue-300 w-max mx-auto">
         Contact
       </p>
 
       {/* Heading */}
-      <h3 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mx-auto mt-4">
-        Reach out to us
-      </h3>
+      <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 text-center mx-auto mt-4">
+  Contact Ocean World Logistics
+</h2>
 
       {/* Description */}
       <p className="text-gray-600 text-center mt-2 max-w-md mx-auto text-base md:text-lg">
-        Ready to grow your brand? Let’s connect and build something exceptional together.
+        Need professional customs clearance, freight forwarding, warehousing or transportation services? Contact Ocean World Logistics today for reliable logistics solutions across Pakistan and international trade routes.
       </p>
 
       {/* Form */}
@@ -112,7 +115,7 @@ export default function ContactSection() {
             type="submit"
             className="inline-flex items-center justify-center bg-linear-to-r from-blue-600 to-teal-400 hover:from-teal-400 hover:to-blue-600 text-white font-semibold px-8 md:px-12 py-3 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg md:text-xl gap-2"
           >
-            Submit
+            Send Message
             <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>

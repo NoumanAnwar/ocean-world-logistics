@@ -44,7 +44,7 @@ const services: Service[] = [
     title: "Customs Clearance",
     description: "A service you can count on, at every border and port. Navigating customs regulations, documentation, and compliance requirements can slow down even the simplest shipment. Ocean World Logistics removes that friction.",
     icon: FileText,
-    img: "/customs.jpg", // Placeholder: Change to your actual image path
+    img: "/customs.webp", // Placeholder: Change to your actual image path
     features: [
       "Complete documentation management",
       "Duty assessment and calculation",
@@ -57,7 +57,7 @@ const services: Service[] = [
     title: "Transportation",
     description: "Domestic reach. Regional connections. Ocean World Logistics provides road transportation across Karachi, Punjab, and Khyber Pakhtunkhwa, with extended cross-border service into Afghanistan, Gwadar, and Iran.",
     icon: Truck,
-    img: "/transport.jpg", // Placeholder: Change to your actual image path
+    img: "/transport.webp", // Placeholder: Change to your actual image path
     features: [
       "Road transportation across Pakistan",
       "Cross-border service to Afghanistan, Gwadar, Iran",
@@ -70,7 +70,7 @@ const services: Service[] = [
     title: "Bonded Carrier",
     description: "Reliable bonded transportation, backed by full compliance. As a bonded carrier, we provide secure, compliant transportation for goods moving under bond — from the port to dry ports, bonded warehouses, and inland destinations.",
     icon: Shield,
-    img: "/bonded.jpg", // Placeholder: Change to your actual image path
+    img: "/bonded.webp", // Placeholder: Change to your actual image path
     features: [
       "Secure bonded transportation",
       "Port to dry port movements",
@@ -83,7 +83,7 @@ const services: Service[] = [
     title: "Afghan Transit Trade",
     description: "Connecting Karachi and Gwadar to Afghanistan and beyond. Operating under the Pakistan–Afghanistan Transit Trade Agreement (APTTA), we facilitate the movement of transit cargo from Karachi and Gwadar into Afghanistan, including Kabul.",
     icon: Globe,
-    img: "/pakafghan.jpg", // Placeholder: Change to your actual image path
+    img: "/pakafghan.webp", // Placeholder: Change to your actual image path
     features: [
       "APTTA compliant operations",
       "Karachi and Gwadar to Afghanistan corridors",
@@ -96,7 +96,7 @@ const services: Service[] = [
     title: "Project Cargo",
     description: "Hassle-free handling for oversized and heavy equipment. For heavy machinery, oversized equipment, and specialized project shipments, we provide dedicated project cargo services with careful planning from route surveys to equipment selection.",
     icon: Package,
-    img: "/projectcargo.png", // Placeholder: Change to your actual image path
+    img: "/projectcargo.webp", // Placeholder: Change to your actual image path
     features: [
       "Heavy machinery transportation",
       "Oversized equipment handling",
@@ -109,7 +109,7 @@ const services: Service[] = [
     title: "Freight Forwarding",
     description: "Freight to the world, managed end to end. Successful freight forwarding requires deep knowledge of customs regulations, carrier networks, and documentation standards. We manage this complexity on your behalf, whether cargo is moving by road or by sea.",
     icon: Ship,
-    img: "/freight.jpeg", // Placeholder: Change to your actual image path
+    img: "/freight.webp", // Placeholder: Change to your actual image path
     features: [
       "Road and sea freight solutions",
       "Fixed shipment schedules",
@@ -122,7 +122,7 @@ const services: Service[] = [
     title: "Shipping Services",
     description: "We move your goods safely, every time. Shipping across borders comes with challenges — shifting regulations, documentation requirements, and unpredictable transit conditions. We offer a range of shipment services for your critical logistics needs.",
     icon: ArrowUpDown,
-    img: "/shippingservice.jpg", // Placeholder: Change to your actual image path
+    img: "/shippingservice.webp", // Placeholder: Change to your actual image path
     features: [
       "Road freight movements",
       "Short-sea freight services",
@@ -135,7 +135,7 @@ const services: Service[] = [
     title: "Import & Export",
     description: "Your dependable import and export partner. We support importers and exporters with end-to-end facilitation — from documentation and customs compliance to coordinating transportation for goods entering or leaving Pakistan.",
     icon: TrendingUp,
-    img: "/importexport.jpg", // Placeholder: Change to your actual image path
+    img: "/importexport.webp", // Placeholder: Change to your actual image path
     features: [
       "End-to-end facilitation",
       "Documentation support",

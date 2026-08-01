@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import FooterSections from "./components/FooterSections";
@@ -9,64 +9,121 @@ import WhatsappButton from "./components/WhatsappButton";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
-// 🔥 FULL SEO-OPTIMIZED METADATA
-export const metadata: Metadata = {
-  title: "Clearing & Forwarding Services in Pakistan | Customs Clearance Karachi",
-  description:
-    "Professional customs clearing and forwarding company in Pakistan. We provide fast GD filing, import/export clearance, freight forwarding, documentation, and logistics services at Karachi Port & Port Qasim.",
-  keywords: [
-    "customs clearing agent pakistan",
-    "clearing and forwarding karachi",
-    "freight forwarder pakistan",
-    "customs clearance karachi port",
-    "import export clearance pakistan",
-    "logistics company pakistan",
-    "karachi customs agent",
-    "port qasim clearing agent"
-  ],
-  robots: "index, follow",
-  authors: [{ name: "Your Company Name" }],
-  creator: "Your Company Name",
-  publisher: "Your Company Name",
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  display: "swap",
+});
 
-  // SOCIAL SHARE OPTIMIZATION
+const WEBSITE_URL = "https://owl.com.pk";
+
+// SEO Metadata
+export const metadata: Metadata = {
+  metadataBase: new URL(WEBSITE_URL),
+
+  title: {
+    default:
+      "Ocean World Logistics | Customs Clearance & Freight Forwarding Pakistan",
+    template: "%s | Ocean World Logistics",
+  },
+
+  description:
+    "Ocean World Logistics provides professional customs clearance, freight forwarding, Afghan Transit Trade (APTTA), sea freight, air freight, road transportation, warehousing, bonded transportation and complete logistics solutions across Pakistan and international trade routes.",
+
+  keywords: [
+    "Ocean World Logistics",
+    "Customs Clearance Pakistan",
+    "Freight Forwarding Pakistan",
+    "Clearing Agent Karachi",
+    "Karachi Port",
+    "Port Qasim",
+    "Sea Freight",
+    "Air Freight",
+    "Road Transportation",
+    "APTTA",
+    "Afghan Transit Trade",
+    "DG Cargo",
+    "Project Cargo",
+    "Bonded Carrier",
+    "Warehousing",
+    "Import Export Pakistan",
+    "Logistics Company Pakistan",
+  ],
+
+  authors: [
+    {
+      name: "Ocean World Logistics",
+    },
+  ],
+
+  creator: "Ocean World Logistics",
+
+  publisher: "Ocean World Logistics",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  },
+
+  alternates: {
+    canonical: WEBSITE_URL,
+  },
+
   openGraph: {
-    title: "Leading Clearing & Forwarding Company in Pakistan",
+    title:
+      "Ocean World Logistics | Customs Clearance & Freight Forwarding",
+
     description:
-      "Fast & reliable customs clearance, freight forwarding, and logistics services across Karachi Port & Port Qasim.",
-    url: "https://yourdomain.com",
-    siteName: "Clearing & Forwarding Pakistan",
+      "Professional Customs Clearance, Freight Forwarding, Warehousing, Transportation and Logistics Solutions.",
+
+    url: WEBSITE_URL,
+
+    siteName: "Ocean World Logistics",
+
+    locale: "en_PK",
+
+    type: "website",
+
     images: [
       {
-        url: "https://yourdomain.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Clearing & Forwarding Pakistan",
+        url: "/logo.webp",
+        width: 512,
+        height: 512,
+        alt: "Ocean World Logistics",
       },
     ],
-    locale: "en_PK",
-    type: "website",
   },
 
-  // TWITTER CARD (X)
   twitter: {
     card: "summary_large_image",
-    title: "Clearing & Forwarding Services in Pakistan",
+
+    title: "Ocean World Logistics",
+
     description:
-      "Reliable customs clearing & forwarding solutions for Karachi Port and Port Qasim.",
-    images: ["https://yourdomain.com/og-image.jpg"],
+      "Professional Customs Clearance & Freight Forwarding Company in Pakistan.",
+
+    images: ["/logo.webp"],
   },
 
-  // BASIC SETTINGS
-  alternates: {
-    canonical: "https://yourdomain.com",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -76,46 +133,42 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        {/* 📌 Structured Data for Local Business (SEO Boost) */}
-        <style>
-          {`
-            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
-            /* Example classes for different weights */
-            .orbitron-400 { font-family: "Orbitron", sans-serif; font-weight: 400; font-style: normal; }
-            .orbitron-500 { font-family: "Orbitron", sans-serif; font-weight: 500; font-style: normal; }
-            .orbitron-600 { font-family: "Orbitron", sans-serif; font-weight: 600; font-style: normal; }
-            .orbitron-700 { font-family: "Orbitron", sans-serif; font-weight: 700; font-style: normal; }
-            .orbitron-800 { font-family: "Orbitron", sans-serif; font-weight: 800; font-style: normal; }
-            .orbitron-900 { font-family: "Orbitron", sans-serif; font-weight: 900; font-style: normal; }
-          `}
-        </style>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Your Clearing & Forwarding Company",
+              "@type": "TransportationService",
+
+              name: "Ocean World Logistics",
+
               description:
-                "Expert customs clearing and forwarding services in Pakistan including GD filing, freight forwarding, and logistics.",
-              url: "https://yourdomain.com",
+                "Professional Customs Clearance, Freight Forwarding, Warehousing and Logistics Services in Pakistan.",
+
+              url: WEBSITE_URL,
+
+              logo: `${WEBSITE_URL}/logo.webp`,
+
+              telephone: "+92-333-3202090",
+
+              email: "info@owl.com.pk",
+
               address: {
                 "@type": "PostalAddress",
-                streetAddress: "Your Street Address",
+                streetAddress:
+                  "Office No. 04, Ground Floor, State Life Building #7, G-Allana Road",
                 addressLocality: "Karachi",
                 addressCountry: "PK",
               },
-              telephone: "+92-300-0000000",
-              areaServed: {
-                "@type": "Country",
-                name: "Pakistan",
-              },
-              sameAs: [
-                "https://facebook.com/yourpage",
-                "https://linkedin.com/yourcompany",
+
+              areaServed: [
+                "Pakistan",
+                "Afghanistan",
+                "China",
+                "Middle East",
+                "Central Asia",
               ],
             }),
           }}
@@ -123,12 +176,12 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-800`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased bg-white text-gray-800`}
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <WhatsappButton/>
-        <FooterSections/>
+        <WhatsappButton />
+        <FooterSections />
       </body>
     </html>
   );

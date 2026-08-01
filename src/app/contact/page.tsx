@@ -119,7 +119,7 @@ export default function ContactPage() {
             <div className="w-20 h-20 mx-auto bg-gradient-to-br from-blue-600 to-teal-500 rounded-full flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
               <User className="w-10 h-10 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-1">Masroor Ahmed</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-1">Masroor Khan</h3>
             <p className="text-blue-600 font-semibold mb-4">Director</p>
             <p className="text-gray-600 text-sm italic leading-relaxed">
               "Our commitment to reliability and integrity remains unchanged."

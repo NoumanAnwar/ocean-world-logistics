@@ -1,0 +1,16 @@
+{
+  "name": "Ocean World Logistics",
+  "short_name": "OWL",
+  "description": "Customs Clearance & Freight Forwarding Company in Pakistan",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

@@ -24,14 +24,19 @@ const clients = [
   "Dream Textile",
   "Zabih Ullah Industry",
   "Best Tea & Food Industry",
+  "Hnr pvt Ltd ",
+  "Orient electronics pvt Ltd",
+  "Interwood pvt Ltd",
+  "Zrk Industry pvt Ltd",
+  "TCL electronics pvt Ltd",
 ];
 
 // 2. Slider Images (Replace these paths with your actual large logistics images)
 const sliderImages = [
-  "/hero1.jpg", // e.g., Large warehouse or port operation
-  "/transport.jpg", // e.g., Fleet of trucks on highway
-  "/shippingservice.jpg", // e.g., Shipping containers at Karachi port
-  "/importexport.jpg", // e.g., Cross-border transit or team photo
+  "/hero1.webp", // e.g., Large warehouse or port operation
+  "/transport.webp", // e.g., Fleet of trucks on highway
+  "/shippingservice.webp", // e.g., Shipping containers at Karachi port
+  "/importexport.webp", // e.g., Cross-border transit or team photo
 ];
 
 // Animation Variants

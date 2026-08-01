@@ -52,7 +52,7 @@ const valuesData = [
 
 const leadershipData = [
   {
-    name: "Masroor Ahmed",
+    name: "Masroor Khan",
     title: "Director",
     image: "/leadership/masroor.jpg",
     quote: "When we founded Ocean World Logistics, our goal was simple: build a logistics company that clients could genuinely rely on. Every shipment carries someone's business behind it, and we never lose sight of that. Our growth since 2017 has been driven by referrals and repeat clients — the strongest proof that our approach works. As we expand our network across Pakistan and into neighboring countries, our commitment to reliability and integrity remains unchanged."
@@ -67,10 +67,10 @@ const leadershipData = [
 
 // 4 Images for the slow-motion flip slider (Replace with your actual image paths)
 const heroImages = [
-  "/1.jpg", // e.g., Warehouse operations
-  "/2.jpg", // e.g., Truck fleet on highway
-  "/3.jpg", // e.g., Port/Shipping containers
-  "/importexport.jpg", // e.g., Cross-border transit
+  "/1.webp", // e.g., Warehouse operations
+  "/2.webp", // e.g., Truck fleet on highway
+  "/3.webp", // e.g., Port/Shipping containers
+  "/importexport.webp", // e.g., Cross-border transit
 ];
 
 // --- MAIN COMPONENT ---

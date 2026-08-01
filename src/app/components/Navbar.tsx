@@ -1,9 +1,16 @@
 "use client";
 
+import { Orbitron } from "next/font/google";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Menu, X } from "lucide-react";
 import Link from "next/link";
+
+const orbitron = Orbitron({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,38 +33,42 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.nav
+    <motion.nav aria-label="Main Navigation"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as const }}
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-slate-900/90 backdrop-blur-md shadow-2xl border-b border-white/10 py-3" 
-          : "bg-gradient-to-r from-black via-slate-900 to-blue-900 py-5"
+  ? "bg-slate-900/90 backdrop-blur-md shadow-2xl border-b border-white/10 py-2" 
+  : "bg-gradient-to-r from-black via-slate-900 to-blue-900 py-3"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
 
         {/* 1. ENHANCED LOGO (Bigger, Visible, SEO Optimized) */}
         <Link href="/" className="flex items-center gap-3 group" aria-label="Ocean World Logistics Home">
-          <motion.img
-            whileHover={{ scale: 1.05, rotate: 2 }}
-            src="/logo.png"
-            alt="Ocean World Logistics Official Company Logo"
-            className="h-14 md:h-16 w-auto object-contain drop-shadow-2xl"
-            width={64}
-            height={64}
-          />
+          <motion.div
+  whileHover={{ scale: 1.05, rotate: 2 }}
+>
+  <Image
+    src="/logo.webp"
+    alt="Ocean World Logistics Official Company Logo"
+    width={80}
+    height={80}
+    quality={75}
+    priority
+    className="h-10 md:h-12 w-auto object-contain drop-shadow-2xl"
+  />
+</motion.div>
           <span
-            className="text-white font-extrabold text-lg md:text-2xl lg:text-3xl tracking-wide leading-tight group-hover:text-teal-300 transition-colors duration-300"
-            style={{ fontFamily: "Orbitron, sans-serif" }}
-          >
+  className={`${orbitron.className} text-white font-extrabold text-base md:text-xl lg:text-2xl tracking-wide leading-tight group-hover:text-teal-300 transition-colors duration-300`}
+>
             OCEAN WORLD <span className="text-teal-400">LOGISTICS</span>
           </span>
         </Link>
 
         {/* 2. DESKTOP MENU (3D Animated & Professional) */}
-        <ul className="hidden lg:flex items-center space-x-2">
+        <ul className="hidden lg:flex items-center space-x-2"  role="menubar">
           {navLinks.map((item, idx) => (
             <motion.li
               key={item.href}
@@ -70,7 +81,7 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className="px-5 py-2.5 text-white font-semibold tracking-wide relative z-10 transition-colors duration-300 group-hover:text-teal-300"
+                className="px-4 py-2 text-white font-semibold tracking-wide relative z-10 transition-colors duration-300 group-hover:text-teal-300"
               >
                 {item.label}
                 {/* Animated 3D-style underline */}
@@ -80,18 +91,29 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* 3. CONTACT CTA (Replaced MapPin with a Premium Button) */}
-        <div className="hidden lg:flex items-center">
-          <motion.a
-            href="/contact"
-            whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(45, 212, 191, 0.4)" }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-400 hover:to-blue-500 text-white px-6 py-3 rounded-full font-bold shadow-lg transition-all duration-300"
-          >
-            <Phone className="w-5 h-5" />
-            <span>Contact Us</span>
-          </motion.a>
-        </div>
+        {/* 3. CONTACT CTA */}
+<div className="hidden lg:flex items-center">
+  <motion.div
+    whileHover={{
+      scale: 1.05,
+      boxShadow: "0px 0px 20px rgba(45,212,191,0.35)",
+    }}
+    whileTap={{ scale: 0.96 }}
+  >
+    <Link
+      href="/contact"
+      prefetch
+      className="flex items-center gap-2 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 px-5 py-3 font-bold text-white shadow-lg transition-all duration-300 hover:from-teal-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-teal-400"
+      aria-label="Contact Ocean World Logistics"
+    >
+      <Phone
+        className="w-5 h-5"
+        aria-hidden="true"
+      />
+      <span>Contact Us</span>
+    </Link>
+  </motion.div>
+</div>
 
         {/* 4. MOBILE MENU BUTTON */}
         <motion.button
@@ -100,7 +122,7 @@ export default function Navbar() {
           className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
           aria-label="Open mobile navigation menu"
         >
-          <Menu className="w-8 h-8" />
+          <Menu className="w-8 h-8" aria-hidden="true"/>
         </motion.button>
       </div>
 
@@ -127,7 +149,7 @@ export default function Navbar() {
             >
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-white/10">
-                <span className="text-white font-bold text-xl" style={{ fontFamily: "Orbitron, sans-serif" }}>
+                <span className={`${orbitron.className} text-white font-bold text-xl`}>
                   Menu
                 </span>
                 <motion.button
@@ -136,12 +158,12 @@ export default function Navbar() {
                   className="text-white p-2 rounded-full hover:bg-white/10 transition-colors"
                   aria-label="Close mobile navigation menu"
                 >
-                  <X className="w-7 h-7" />
+                  <X className="w-7 h-7" aria-hidden="true"/>
                 </motion.button>
               </div>
 
               {/* Links */}
-              <ul className="flex-1 overflow-y-auto py-8 px-6 space-y-2">
+              <ul className="flex-1 overflow-y-auto py-8 px-6 space-y-2" role="menu">
                 {navLinks.map((item, idx) => (
                   <motion.li
                     key={item.href}
@@ -161,20 +183,29 @@ export default function Navbar() {
               </ul>
 
               {/* Mobile CTA */}
-              <div className="p-6 border-t border-white/10">
-                <motion.a
-                  href="/contact"
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-center gap-3 w-full bg-gradient-to-r from-teal-500 to-blue-600 text-white py-4 rounded-xl font-bold shadow-lg"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Get in Touch</span>
-                </motion.a>
-                <p className="text-center text-gray-400 text-sm mt-4">
-                  © 2026 Ocean World Logistics
-                </p>
-              </div>
+<div className="p-6 border-t border-white/10">
+  <motion.div
+    whileTap={{ scale: 0.95 }}
+  >
+    <Link
+      href="/contact"
+      prefetch
+      onClick={() => setIsOpen(false)}
+      className="flex w-full items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-teal-500 to-blue-600 py-4 font-bold text-white shadow-lg transition-all duration-300 hover:from-teal-400 hover:to-blue-500 focus:outline-none focus:ring-2 focus:ring-teal-400"
+      aria-label="Contact Ocean World Logistics"
+    >
+      <Phone
+        className="w-5 h-5"
+        aria-hidden="true"
+      />
+      <span>Get in Touch</span>
+    </Link>
+  </motion.div>
+
+  <p className="mt-4 text-center text-sm text-gray-400">
+    © 2026 Ocean World Logistics
+  </p>
+</div>
             </motion.div>
           </>
         )}

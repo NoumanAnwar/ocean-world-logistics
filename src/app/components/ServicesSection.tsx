@@ -14,7 +14,7 @@ const services = [
     id: 1,
     title: "Customs Clearance",
     icon: FileText,
-    image: "/customs.jpg",
+    image: "/customs.webp",
     shortDesc: "A service you can count on, at every border and port.",
     fullDesc: "Navigating customs regulations, documentation, and compliance requirements can slow down even the simplest shipment. Ocean World Logistics removes that friction.",
     features: [
@@ -30,7 +30,7 @@ const services = [
     id: 2,
     title: "Transportation",
     icon: Truck,
-    image: "/hero6.jpg",
+    image: "/hero6.webp",
     shortDesc: "Domestic reach. Regional connections.",
     fullDesc: "Ocean World Logistics provides road transportation across Karachi, Punjab, and Khyber Pakhtunkhwa, with extended cross-border service into Afghanistan, Gwadar, and Iran.",
     features: [
@@ -46,7 +46,7 @@ const services = [
     id: 3,
     title: "Bonded Carrier",
     icon: Shield,
-    image: "/dg.jpg",
+    image: "/dg.webp",
     shortDesc: "Reliable bonded transportation, backed by full compliance.",
     fullDesc: "As a bonded carrier, we provide secure, compliant transportation for goods moving under bond — from the port to dry ports, bonded warehouses, and inland destinations.",
     features: [
@@ -62,7 +62,7 @@ const services = [
     id: 4,
     title: "Afghan Transit Trade",
     icon: Globe,
-    image: "/pakafghan.jpg",
+    image: "/pakafghan.webp",
     shortDesc: "Connecting Karachi and Gwadar to Afghanistan and beyond.",
     fullDesc: "Operating under the Pakistan–Afghanistan Transit Trade Agreement (APTTA), we facilitate the movement of transit cargo from Karachi and Gwadar into Afghanistan, including Kabul.",
     features: [
@@ -78,7 +78,7 @@ const services = [
     id: 5,
     title: "Project Cargo",
     icon: Package,
-    image: "/projectcargo.png",
+    image: "/projectcargo.webp",
     shortDesc: "Hassle-free handling for oversized and heavy equipment.",
     fullDesc: "For heavy machinery, oversized equipment, and specialized project shipments, we provide dedicated project cargo services with careful planning from route surveys to equipment selection.",
     features: [
@@ -94,7 +94,7 @@ const services = [
     id: 6,
     title: "Freight Forwarding",
     icon: Ship,
-    image: "/shippingservice.jpg",
+    image: "/shippingservice.webp",
     shortDesc: "Freight to the world, managed end to end.",
     fullDesc: "Successful freight forwarding requires deep knowledge of customs regulations, carrier networks, and documentation standards. We manage this complexity on your behalf, whether cargo is moving by road or by sea.",
     features: [
@@ -110,7 +110,7 @@ const services = [
     id: 7,
     title: "Shipping Services",
     icon: ArrowUpDown,
-    image: "/1.jpg ",
+    image: "/1.webp",
     shortDesc: "We move your goods safely, every time.",
     fullDesc: "Shipping across borders comes with challenges — shifting regulations, documentation requirements, and unpredictable transit conditions. We offer a range of shipment services for your critical logistics needs.",
     features: [
@@ -126,7 +126,7 @@ const services = [
     id: 8,
     title: "Import & Export",
     icon: TrendingUp,
-    image: "/importexport.jpg",
+    image: "/importexport.webp",
     shortDesc: "Your dependable import and export partner.",
     fullDesc: "We support importers and exporters with end-to-end facilitation — from documentation and customs compliance to coordinating transportation for goods entering or leaving Pakistan.",
     features: [
