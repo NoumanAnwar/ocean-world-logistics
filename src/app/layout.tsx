@@ -102,7 +102,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/logo.webp",
+        url: "/logo.png",
         width: 512,
         height: 512,
         alt: "Ocean World Logistics",
@@ -118,7 +118,7 @@ export const metadata: Metadata = {
     description:
       "Professional Customs Clearance & Freight Forwarding Company in Pakistan.",
 
-    images: ["/logo.webp"],
+    images: ["/logo.png"],
   },
 
   icons: {
@@ -149,7 +149,7 @@ export default function RootLayout({
 
               url: WEBSITE_URL,
 
-              logo: `${WEBSITE_URL}/logo.webp`,
+              logo: `${WEBSITE_URL}/logo.png`,
 
               telephone: "+92-333-3202090",
 
