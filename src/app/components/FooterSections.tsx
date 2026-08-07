@@ -161,17 +161,23 @@ const FooterSections = () => {
               </address>
             </div>
 
-            <div>
-              <p className="font-semibold text-white">Phone</p>
+           <div className="flex flex-col">
+  <a
+    href="tel:+923333202090"
+    className="hover:text-teal-300 transition-colors"
+    aria-label="Call Ocean World Logistics"
+  >
+    +92 333 3202090
+  </a>
 
-              <a
-                href="tel:+923333202090"
-                className="hover:text-teal-300 transition-colors"
-                aria-label="Call Ocean World Logistics"
-              >
-                +92 333 3202090
-              </a>
-            </div>
+  <a
+    href="tel:+923062989415"
+    className="hover:text-teal-300 transition-colors"
+    aria-label="Call Ocean World Logistics"
+  >
+    +92 306 2989415
+  </a>
+</div>
 
             <div>
               <p className="font-semibold text-white">Email</p>

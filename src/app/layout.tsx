@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import FooterSections from "./components/FooterSections";
 import WhatsappButton from "./components/WhatsappButton";
+import SplashScreen from "./components/SplashScreen";
 
 // Fonts
 const geistSans = Geist({
@@ -178,6 +179,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} antialiased bg-white text-gray-800`}
       >
+        <SplashScreen />
         <Navbar />
         {children}
         <WhatsappButton />

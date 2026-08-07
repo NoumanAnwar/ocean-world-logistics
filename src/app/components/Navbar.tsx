@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import { Orbitron } from "next/font/google";
 import Image from "next/image";
@@ -46,59 +46,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
 
         {/* 1. ENHANCED LOGO (Bigger, Visible, SEO Optimized) */}
-        <Link
-  href="/"
-  className="flex items-center gap-4 group"
-  aria-label="Ocean World Logistics Home"
+        <Link href="/" className="flex items-center gap-3 group" aria-label="Ocean World Logistics Home">
+          <motion.div
+  whileHover={{ scale: 1.05, rotate: 2 }}
 >
-  <motion.div
-  className="relative flex items-center justify-center w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28"
-  animate={{
-    x: [0, 12, 0, -12, 0],
-  }}
-  transition={{
-    duration: 8,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  whileHover={{
-    scale: 1.08,
-    transition: { duration: 0.3 },
-  }}
+  <Image
+    src="/logo.webp"
+    alt="Ocean World Logistics Official Company Logo"
+    width={80}
+    height={80}
+    quality={75}
+    priority
+    className="h-10 md:h-12 w-auto object-contain drop-shadow-2xl"
+  />
+</motion.div>
+          <span
+  className={`${orbitron.className} text-white font-extrabold text-base md:text-xl lg:text-2xl tracking-wide leading-tight group-hover:text-teal-300 transition-colors duration-300`}
 >
-    {/* Glow Behind Logo */}
-    <motion.div
-      className="absolute inset-0 rounded-full bg-cyan-400/30 blur-2xl"
-      animate={{
-        scale: [1, 1.25, 1],
-        opacity: [0.45, 0.8, 0.45],
-      }}
-      transition={{
-        duration: 2.8,
-        repeat: Infinity,
-      }}
-    />
-
-    <Image
-      src="/logo.webp"
-      alt="Ocean World Logistics Official Company Logo"
-      width={140}
-      height={140}
-      priority
-      quality={100}
-      className="relative z-10 h-16 md:h-20 lg:h-24 xl:h-28 w-auto object-contain drop-shadow-[0_0_35px_rgba(34,211,238,0.9)]"
-    />
-  </motion.div>
-
-  <span
-    className={`${orbitron.className} text-white font-extrabold text-lg md:text-2xl lg:text-3xl tracking-wide leading-tight transition-all duration-300 group-hover:text-cyan-300`}
-  >
-    OCEAN WORLD{" "}
-    <span className="bg-gradient-to-r from-cyan-400 to-teal-300 bg-clip-text text-transparent">
-      LOGISTICS
-    </span>
-  </span>
-</Link>
+            OCEAN WORLD <span className="text-teal-400">LOGISTICS</span>
+          </span>
+        </Link>
 
         {/* 2. DESKTOP MENU (3D Animated & Professional) */}
         <ul className="hidden lg:flex items-center space-x-2"  role="menubar">
